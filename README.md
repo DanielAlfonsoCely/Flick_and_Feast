@@ -1,70 +1,75 @@
-![banner](img/screenshot.png)
+# 🎬🍿 Flick and Feast
+
+> Cinema chain management system with full database backend — Database course project, Universidad Nacional de Colombia, 2025.
+
+Flick and Feast is a desktop application that simulates the management of a cinema chain. It handles ticketing, concessions, clients, subscriptions, and functions through a robust relational database backend built entirely in SQL.
 
 ---
 
-# Flick and Feast
+## 🗄️ What it does
 
-Proyecto académico de bases de datos.  
-El código se encuentra en un estado **mezclado y acoplado**, por lo que este repositorio es una forma **temporal** de mantenerlo disponible.
+- Manage movies, functions, and screening rooms
+- Handle ticket sales and seat assignments
+- Track client subscriptions and loyalty programs
+- Manage concession inventory and sales
+- Generate reports from structured relational data
 
-## Requisitos
+---
 
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Java (Swing) |
+| Database | MySQL via JDBC |
+| IDE | Apache NetBeans |
+| Schema | 20 tables, 9 triggers, stored procedures |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 - [Apache NetBeans](https://netbeans.apache.org/)
-- [MySQL](https://dev.mysql.com/downloads/mysql/) instalado y corriendo
-- [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/) (archivo `.jar`)
+- [MySQL](https://dev.mysql.com/downloads/mysql/) installed and running
+- [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/) (`.jar` file)
 
-## Cómo ejecutar
+### Steps
 
-1. **Descargar el proyecto**  
-   Clonar este repositorio.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DanielAlfonsoCely/Flick_and_Feast.git
+   ```
 
-2. **Abrir en NetBeans**  
-   - En NetBeans, ir a `File > Open Project`.
-   - Seleccionar la carpeta `FLickandFeast.zip` del proyecto.
+2. Open in NetBeans via `File > Open Project`.
 
-3. **Añadir el conector de MySQL**  
-   - Hacer clic derecho sobre el proyecto en NetBeans.  
-   - Ir a `Properties > Libraries > Add JAR/Folder`.  
-   - Seleccionar el archivo `mysql-connector-j-x.x.x.jar`.
+3. Add the MySQL connector:
+   - Right-click the project → `Properties > Libraries > Add JAR/Folder`
+   - Select `mysql-connector-j-x.x.x.jar`
 
-4. **Configurar credenciales de MySQL**  
-   - Editar en el código la sección donde se define el usuario y contraseña de la base de datos.  
-   - Ejemplo:  
+4. Set your database credentials in the source:
+   ```java
+   String url = "jdbc:mysql://localhost:3306/flickandfeast";
+   String user = "your_user";
+   String password = "your_password";
+   ```
 
-     ```java
-     String url = "jdbc:mysql://localhost:3306/flickandfeast";
-     String user = "tu_usuario";
-     String password = "tu_contraseña";
-     ```
+5. Run the project from NetBeans.
 
-   ⚠️ Se asume que la base de datos ya está creada y contiene las tablas necesarias.
-
-5. **Ejecutar el programa desde NetBeans**  
-   El proyecto debería compilar y correr dentro del entorno.
-
-## Notas
-
-- En **Visual Studio Code no corría** en las pruebas realizadas.  
-- La estructura del proyecto aún requiere refactorización.  
+> ⚠️ Note: the database must already exist with the required tables. SQL schema files are included in the repository.
 
 ---
 
-## Aclaración sobre el origen del repositorio
+## 👥 Team
 
-Este proyecto es un **fork** del repositorio original: [jdrsajonia/flick_and_feast](https://github.com/jdrsajonia/flick_and_feast).
+Developed as a university project for the **Databases** course at **Universidad Nacional de Colombia**.
 
-En el repositorio original, varias carpetas del proyecto se encuentran comprimidas en archivos `.zip`, por lo que en este repositorio se descomprimieron todos los archivos para que puedan ser visualizados directamente desde GitHub sin necesidad de descargarlos.
-
----
-
-## Integrantes
-
-| Nombre | GitHub |
-|--------|--------|
+| Name | GitHub |
+|---|---|
 | Maria Catalina Rodriguez | [@Cata120804](https://github.com/Cata120804) |
 | Juan Diego Rozo | [@jdrsajonia](https://github.com/jdrsajonia) |
 | Daniel Alfonso Cely | [@DanielAlfonsoCely](https://github.com/DanielAlfonsoCely) |
 
 ---
 
-✍️ Proyecto desarrollado como trabajo académico en la materia de **Bases de Datos**.
+> This repository is a reorganized fork of the [original repo](https://github.com/jdrsajonia/flick_and_feast), where some folders were compressed as `.zip` files. Here all files are extracted and browsable directly on GitHub.
